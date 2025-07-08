@@ -10,6 +10,10 @@ namespace nodos_list
     {
         static void Main(string[] args)
         {
+            List<Object> lista = new List<Object>();
+
+            LinkedList<String> nodos = new LinkedList<String>();
+
         }
     }
 }
