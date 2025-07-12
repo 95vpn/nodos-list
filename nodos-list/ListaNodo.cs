@@ -26,6 +26,42 @@ namespace nodos_list
                 primero = nuevo;
                 nuevo.siguiente = null;
             }
+            else
+            {
+                valor1 = primero;
+                while (valor1 != null)
+                {
+                    valor2 = valor1.siguiente;
+                    if (nuevo.dato <= valor1.dato)
+                    {
+                        nuevo.siguiente = primero;
+                        primero = nuevo;
+                        break;
+                    }
+                    else
+                    {
+                        if (nuevo.dato > valor1.dato && valor2 == null)
+                        {
+                            valor1.siguiente = nuevo;
+                            nuevo.siguiente = null;
+                            break;
+                        }
+                        else
+                        {
+                            if (valor1.dato < nuevo.dato && valor2.dato >= nuevo.dato)
+                            {
+                                valor1.siguiente = nuevo;
+                                nuevo.siguiente = valor2;
+                                break;
+                            }
+                            else
+                            {
+                                valor1 = valor1.siguiente;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
