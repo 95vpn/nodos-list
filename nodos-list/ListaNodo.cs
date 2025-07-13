@@ -63,5 +63,16 @@ namespace nodos_list
                 }
             }
         }
+        public void ListaVacia()
+        {
+            if (primero == null)
+            {
+                Console.WriteLine("La lista esta vacia");
+            }
+            else
+            {
+                Console.WriteLine("La lista tiene datos");
+            }
+        }
     }
 }

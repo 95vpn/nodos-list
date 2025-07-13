@@ -10,9 +10,14 @@ namespace nodos_list
     {
         static void Main(string[] args)
         {
-            List<Object> lista = new List<Object>();
-
-            LinkedList<String> nodos = new LinkedList<String>();
+            var list = new ListaNodo();
+            list.ListaVacia();
+            list.addNodo(1);
+            list.addNodo(3);
+            list.addNodo(2);
+            list.addNodo(4);
+            list.ListaVacia();
+            Console.ReadKey();
 
         }
     }
