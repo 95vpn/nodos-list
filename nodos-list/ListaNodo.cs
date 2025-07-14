@@ -74,5 +74,34 @@ namespace nodos_list
                 Console.WriteLine("La lista tiene datos");
             }
         }
+
+        public void Listar()
+        {
+            Nodo actual = primero;
+
+            while (actual != null)
+            {
+                Console.Write($"[{actual.dato}]->");
+
+                actual = actual.siguiente;
+            }
+        }
+
+        public void DeletePrimero()
+        {
+            primero = primero.siguiente;
+        }
+
+        public void DeleteUltimo()
+        {
+            Nodo anterior = primero;
+            Nodo actual = primero;
+
+            while (actual.siguiente != null)
+            {
+                anterior = actual;
+                actual = actual.siguiente;
+            }
+        }
     }
 }

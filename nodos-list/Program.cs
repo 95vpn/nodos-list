@@ -17,6 +17,10 @@ namespace nodos_list
             list.addNodo(2);
             list.addNodo(4);
             list.ListaVacia();
+            list.Listar();
+            list.DeletePrimero();
+            Console.WriteLine();
+            list.Listar();
             Console.ReadKey();
 
         }
