@@ -62,6 +62,7 @@ namespace nodos_list
                     }
                 }
             }
+            size++;
         }
         public void ListaVacia()
         {
@@ -149,6 +150,19 @@ namespace nodos_list
             return null;
         }
 
+        public void Sustituir (int orig, int nuevo)
+        {
+            Nodo pos = Buscar(orig);
 
+            if (pos != null || pos == null)
+            {
+                pos.dato = nuevo;
+            }
+        }
+
+        public int Size()
+        {
+            return size;
+        }
     }
 }

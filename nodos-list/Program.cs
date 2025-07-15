@@ -19,8 +19,9 @@ namespace nodos_list
             list.ListaVacia();
             list.Listar();
             //list.DeletePrimero();
-            list.DeletePosicionNodo(3);
-            Console.WriteLine();
+            //list.DeletePosicionNodo(3)
+            list.Sustituir(3, 6);
+            Console.WriteLine(list.Size());
             //list.DeleteUltimo();
             list.Listar();
             Console.ReadKey();
