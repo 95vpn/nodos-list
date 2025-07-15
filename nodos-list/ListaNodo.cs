@@ -103,5 +103,52 @@ namespace nodos_list
                 actual = actual.siguiente;
             }
         }
+
+        public void DeletePosicionNodo(int p)
+        {
+            Nodo anterior = primero;
+            Nodo actual = primero;
+            int dato = 0;
+            if (p > 0)
+            {
+                while (dato != p && actual.siguiente != null)
+                {
+                    anterior = actual;
+                    actual = actual.siguiente;
+                }
+                anterior.siguiente = actual.siguiente;
+            }
+        }
+
+        public Nodo Buscar(int n)
+        {
+            Nodo p = primero;
+
+            if (p == null)
+            {
+                Console.WriteLine("La lista no tiene datos");
+            }
+            else
+            {
+                while (p.siguiente != null || p.siguiente == null)
+                {
+                    if (p.dato == n)
+                    {
+                        return p;
+                    }
+                    else
+                    {
+                        if (p.siguiente == null)
+                        {
+                            return null;
+                        }
+                    }
+                    p = p.siguiente;
+                }
+            }
+            return null;
+        }
+
+
     }
 }

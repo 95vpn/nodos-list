@@ -18,8 +18,10 @@ namespace nodos_list
             list.addNodo(4);
             list.ListaVacia();
             list.Listar();
-            list.DeletePrimero();
+            //list.DeletePrimero();
+            list.DeletePosicionNodo(3);
             Console.WriteLine();
+            //list.DeleteUltimo();
             list.Listar();
             Console.ReadKey();
 
